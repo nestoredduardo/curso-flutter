@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 import 'description_place.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
+
+  String descriptionText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at dui convallis, pharetra nunc at, vulputate massa. Donec condimentum ac erat eu accumsan. Curabitur ultrices pretium erat, vel mattis erat commodo ut. Maecenas dapibus odio diam, eu pulvinar eros iaculis nec. Phasellus non posuere mi, nec lobortis ipsum. Sed non odio vel justo varius condimentum. In varius condimentum turpis, nec hendrerit metus suscipit ac. In hac habitasse platea dictumst. In enim orci, molestie vel leo ac, efficitur rhoncus risus. Aliquam feugiat felis eget ex suscipit, et rhoncus neque molestie. Nunc rutrum malesuada elementum.";
 
   // This widget is the root of your application.
   @override
@@ -14,6 +18,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        textTheme: GoogleFonts.latoTextTheme(
+          Theme.of(context).textTheme,
+        ),
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
@@ -29,7 +36,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Hello World Platzi"),
         ),
-        body: DescriptionPlace()
+        body: DescriptionPlace("Bahamas", 4, descriptionText)
       )
       //const MyHomePage(title: 'Flutter Demo Home Page'),
     );

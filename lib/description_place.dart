@@ -1,9 +1,37 @@
 import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget{
+  String namePlace;
+  int stars;
+  String descriptionPlace;
+
+  DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace);
+
   @override
   Widget build(BuildContext context) {
     //TODO: implement build
+
+    final star_half = Container(
+      margin: EdgeInsets.only(
+          top: 323,
+          right: 3
+      ),
+      child: Icon(
+        Icons.star_half,
+        color: Color(0xFFf2C611),
+      ),
+    );
+
+    final star_border = Container(
+      margin: EdgeInsets.only(
+          top: 323,
+          right: 3
+      ),
+      child: Icon(
+        Icons.star_border,
+        color: Color(0xFFf2C611),
+      ),
+    );
 
     final star = Container(
       margin: EdgeInsets.only(
@@ -22,8 +50,8 @@ class DescriptionPlace extends StatelessWidget{
         star,
         star,
         star,
-        star,
-        star,
+        star_half,
+        star_border,
       ],
     );
 
@@ -34,11 +62,11 @@ class DescriptionPlace extends StatelessWidget{
         right: 40
       ),
       child: Text(
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at dui convallis, pharetra nunc at, vulputate massa. Donec condimentum ac erat eu accumsan. Curabitur ultrices pretium erat, vel mattis erat commodo ut. Maecenas dapibus odio diam, eu pulvinar eros iaculis nec. Phasellus non posuere mi, nec lobortis ipsum. Sed non odio vel justo varius condimentum. In varius condimentum turpis, nec hendrerit metus suscipit ac. In hac habitasse platea dictumst. In enim orci, molestie vel leo ac, efficitur rhoncus risus. Aliquam feugiat felis eget ex suscipit, et rhoncus neque molestie. Nunc rutrum malesuada elementum.",
-            style: TextStyle(
-              fontSize: 10,
-              color: Colors.grey
-            ),
+        descriptionPlace,
+        style: TextStyle(
+          fontSize: 10,
+          color: Colors.grey
+        ),
         textAlign: TextAlign.left,
       ),
     );
@@ -50,7 +78,7 @@ class DescriptionPlace extends StatelessWidget{
           right: 20
       ),
       child: Text(
-        "Duwili Ella",
+        namePlace,
         style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.w900
