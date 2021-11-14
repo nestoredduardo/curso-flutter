@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'description_place.dart';
+import 'review_list.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,9 +35,9 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Hello World Platzi"),
+          title: const Text("Hello World Platzi"),
         ),
-        body: DescriptionPlace("Bahamas", 4, descriptionText)
+        body: Column(children: [DescriptionPlace("Bahamas", 4, descriptionText), ReviewList()],)
       )
       //const MyHomePage(title: 'Flutter Demo Home Page'),
     );
