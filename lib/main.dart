@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'description_place.dart';
 import 'review_list.dart';
+import 'gradient_back.dart';
 
 void main() {
   runApp(MyApp());
@@ -37,7 +38,18 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Hello World Platzi"),
         ),
-        body: Column(children: [DescriptionPlace("Bahamas", 4, descriptionText), ReviewList()],)
+        body: Stack(
+          children: <Widget>[
+            ListView(
+              children: [
+                DescriptionPlace("Bahamas", 4, descriptionText),
+                ReviewList()
+              ],
+            ),
+            const GradientBack()
+          ],
+        ),
+        //body: Column(children: [DescriptionPlace("Bahamas", 4, descriptionText), ReviewList()],)
       )
       //const MyHomePage(title: 'Flutter Demo Home Page'),
     );

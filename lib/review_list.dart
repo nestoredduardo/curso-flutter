@@ -13,6 +13,12 @@ class ReviewList extends StatelessWidget {
 
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Column(children: [Review(imagePath, name, details, comment), Review(imagePath, name, details, comment)],);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Review(imagePath, name, details, comment),
+        Review(imagePath, name, details, comment),
+        Review(imagePath, name, details, comment)]
+    );
   }
 }
