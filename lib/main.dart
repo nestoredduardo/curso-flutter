@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'description_place.dart';
@@ -6,6 +7,12 @@ import 'review_list.dart';
 import 'gradient_back.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent,
+          statusBarBrightness: Brightness.light
+      )
+  );
   runApp(MyApp());
 }
 
@@ -46,7 +53,7 @@ class MyApp extends StatelessWidget {
                 ReviewList()
               ],
             ),
-            const GradientBack()
+             GradientBack('Popular')
           ],
         ),
         //body: Column(children: [DescriptionPlace("Bahamas", 4, descriptionText), ReviewList()],)
