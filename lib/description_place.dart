@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tripy/button_purple.dart';
 
 class DescriptionPlace extends StatelessWidget{
   String namePlace;
@@ -11,34 +12,34 @@ class DescriptionPlace extends StatelessWidget{
   Widget build(BuildContext context) {
     //TODO: implement build
 
-    final star_half = Container(
-      margin: EdgeInsets.only(
+    final starHalf = Container(
+      margin: const EdgeInsets.only(
           top: 323,
           right: 3
       ),
-      child: Icon(
+      child: const Icon(
         Icons.star_half,
         color: Color(0xFFf2C611),
       ),
     );
 
-    final star_border = Container(
-      margin: EdgeInsets.only(
+    final starBorder = Container(
+      margin: const EdgeInsets.only(
           top: 323,
           right: 3
       ),
-      child: Icon(
+      child: const Icon(
         Icons.star_border,
         color: Color(0xFFf2C611),
       ),
     );
 
     final star = Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         top: 323,
         right: 3
       ),
-      child: Icon(
+      child: const Icon(
         Icons.star,
         color: Color(0xFFf2C611),
       ),
@@ -50,20 +51,20 @@ class DescriptionPlace extends StatelessWidget{
         star,
         star,
         star,
-        star_half,
-        star_border,
+        starHalf,
+        starBorder,
       ],
     );
 
     final description = Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         left: 20,
         top: 15,
         right: 40
       ),
       child: Text(
         descriptionPlace,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 10,
           color: Colors.grey
         ),
@@ -72,14 +73,14 @@ class DescriptionPlace extends StatelessWidget{
     );
 
     final title = Container (
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
           top: 320,
           left: 20,
           right: 20
       ),
       child: Text(
         namePlace,
-        style: TextStyle(
+        style: const TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.w900
         ),
@@ -87,13 +88,15 @@ class DescriptionPlace extends StatelessWidget{
       ),
     );
 
-    final title_starts = Column(
+    final titleStarts = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Row(children: [title, starsGroup]),
-        description
+        description,
+        ButtonPurple('Navigate')
       ],
     );
 
-    return title_starts;
+    return titleStarts;
   }
 }
