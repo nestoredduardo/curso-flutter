@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tripy/designers_header.dart';
 import 'package:tripy/header_appbar.dart';
 
 import 'description_place.dart';
@@ -42,7 +43,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(
+        appBar: DesignersHeader(),
+        /*appBar: AppBar(
           title: const Text("Hello World Platzi"),
         ),
         body: Stack(
@@ -55,7 +57,7 @@ class MyApp extends StatelessWidget {
             ),
             HeaderAppBar()
           ],
-        ),
+        ),*/
         //body: Column(children: [DescriptionPlace("Bahamas", 4, descriptionText), ReviewList()],)
       )
       //const MyHomePage(title: 'Flutter Demo Home Page'),
