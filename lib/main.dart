@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tripy/designers_header.dart';
-import 'package:tripy/header_appbar.dart';
 
+import 'designers_header.dart';
+import 'designers_list.dart';
+
+import 'header_appbar.dart';
 import 'description_place.dart';
 import 'review_list.dart';
 
@@ -44,6 +46,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: DesignersHeader(),
+        body: DesignersList(),
         /*appBar: AppBar(
           title: const Text("Hello World Platzi"),
         ),
