@@ -45,11 +45,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: DesignersHeader(),
-        body: DesignersList(),
+        /*appBar: DesignersHeader(),
+        body: DesignersList(),*/
         /*appBar: AppBar(
           title: const Text("Hello World Platzi"),
-        ),
+        ),*/
         body: Stack(
           children: <Widget>[
             ListView(
@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
             ),
             HeaderAppBar()
           ],
-        ),*/
+        ),
         //body: Column(children: [DescriptionPlace("Bahamas", 4, descriptionText), ReviewList()],)
       )
       //const MyHomePage(title: 'Flutter Demo Home Page'),
