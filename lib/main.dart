@@ -2,12 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'designers_header.dart';
-import 'designers_list.dart';
-
-import 'header_appbar.dart';
-import 'description_place.dart';
-import 'review_list.dart';
+import 'tripy.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -21,8 +16,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
-
-  String descriptionText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at dui convallis, pharetra nunc at, vulputate massa. Donec condimentum ac erat eu accumsan. Curabitur ultrices pretium erat, vel mattis erat commodo ut. Maecenas dapibus odio diam, eu pulvinar eros iaculis nec. Phasellus non posuere mi, nec lobortis ipsum. Sed non odio vel justo varius condimentum. In varius condimentum turpis, nec hendrerit metus suscipit ac. In hac habitasse platea dictumst. In enim orci, molestie vel leo ac, efficitur rhoncus risus. Aliquam feugiat felis eget ex suscipit, et rhoncus neque molestie. Nunc rutrum malesuada elementum.";
 
   // This widget is the root of your application.
   @override
@@ -44,25 +37,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        /*appBar: DesignersHeader(),
-        body: DesignersList(),*/
-        /*appBar: AppBar(
-          title: const Text("Hello World Platzi"),
-        ),*/
-        body: Stack(
-          children: <Widget>[
-            ListView(
-              children: [
-                DescriptionPlace("Bahamas", 4, descriptionText),
-                ReviewList()
-            ],
-            ),
-            HeaderAppBar()
-          ],
-        ),
-        //body: Column(children: [DescriptionPlace("Bahamas", 4, descriptionText), ReviewList()],)
-      )
+      home: Tripy()
       //const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

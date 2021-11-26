@@ -11,6 +11,7 @@ class ButtonPurple extends StatelessWidget{
     // TODO: implement build
     return InkWell(
       onTap: (){
+        ScaffoldMessenger.of(context).clearSnackBars();
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
               content: Text('Navegando')

@@ -14,6 +14,8 @@ class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen>{
     setState(() {
       _tap = !_tap;
     });
+
+    ScaffoldMessenger.of(context).clearSnackBars();
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
           content: _tap? const Text('Añadido a favoritos') : const Text('Retirado de favoritos')
